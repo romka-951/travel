@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Путешествие на Пхукет — Главная</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    .card { border-radius: 1.25rem; box-shadow: 0 10px 30px rgba(2,6,23,.08); }
+    .prose p { margin-top: .5rem; }
+    .tag { display:inline-block; padding:.25rem .6rem; border-radius:9999px; background:#eef2ff; color:#3730a3; font-weight:600; font-size:.8rem; }
+    .navlink { margin-right: 1rem; }
+  </style>
+
+</head>
+<body class="bg-gradient-to-b from-white via-slate-50 to-slate-100 text-slate-900">
+  <header class="mx-auto max-w-7xl px-6 pt-6 pb-4 flex justify-between items-center">
+    <a href="index.html" class="text-lg font-extrabold tracking-tight">Пхукет Trip</a>
+    <nav class="text-sm font-semibold">
+      <a href="index.html" class="navlink hover:underline">Главная</a>
+      <a href="itinerary.html" class="navlink hover:underline">Маршрут</a>
+      <a href="sights.html" class="navlink hover:underline">Достопримечательности</a>
+      <a href="entertainment.html" class="navlink hover:underline">Развлечения</a>
+      <a href="tips.html" class="navlink hover:underline">Полезное</a>
+      <a href="budget.html" class="navlink hover:underline">Бюджет</a>
+      <a href="contacts.html" class="navlink hover:underline">Контакты</a>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-6 pb-16">
+    <section class="card overflow-hidden bg-white">
+      <div class="grid md:grid-cols-2">
+        <img src="images/hero.svg" alt="Пхукет Trip" class="w-full h-80 md:h-full object-cover">
+        <div class="p-8 md:p-10">
+          <div class="tag">Октябрь — Ноябрь</div>
+          <h1 class="mt-4 text-4xl md:text-5xl font-extrabold">От маршрута до лайфхаков: всё о нашей поездке</h1>
+          <p class="mt-3 text-lg text-slate-600">Самара → Санкт‑Петербург → Москва → Пекин → Пхукет → обратно. Карты, фотогид по местам, пляжи и острова, еда, budget-план и советы.</p>
+          <div class="mt-6 flex gap-3">
+            <a href="itinerary.html" class="px-4 py-2 rounded-2xl bg-indigo-600 text-white font-semibold">Перейти к маршруту</a>
+            <a href="sights.html" class="px-4 py-2 rounded-2xl bg-slate-100 text-slate-900 font-semibold">Достопримечательности</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">Что внутри</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="card bg-white p-6">
+          <h3 class="text-xl font-semibold">Карты и время</h3>
+          <p class="text-slate-600">Интерактивная карта перелётов и расписание на каждый отрезок пути.</p>
+        </div>
+        <div class="card bg-white p-6">
+          <h3 class="text-xl font-semibold">Локации и пляжи</h3>
+          <p class="text-slate-600">Большой Будда, Старый город, Пхи‑Пхи, Симиланы, Джеймс Бонд и не только.</p>
+        </div>
+        <div class="card bg-white p-6">
+          <h3 class="text-xl font-semibold">Лайфхаки</h3>
+          <p class="text-slate-600">Связь, деньги, транспорт, безопасность, дресс‑код в храмах, аптечка, тропические риски.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="mt-16 pb-12 text-center text-xs text-slate-500">
+    © Путешествие на Пхукет · Сделано с любовью
+  </footer>
+</body>
+</html>
