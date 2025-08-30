@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Достопримечательности Пхукета</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    .card { border-radius: 1.25rem; box-shadow: 0 10px 30px rgba(2,6,23,.08); }
+    .prose p { margin-top: .5rem; }
+    .tag { display:inline-block; padding:.25rem .6rem; border-radius:9999px; background:#eef2ff; color:#3730a3; font-weight:600; font-size:.8rem; }
+    .navlink { margin-right: 1rem; }
+  </style>
+
+</head>
+<body class="bg-gradient-to-b from-white via-slate-50 to-slate-100 text-slate-900">
+  <header class="mx-auto max-w-7xl px-6 pt-6 pb-4 flex justify-between items-center">
+    <a href="index.html" class="text-lg font-extrabold tracking-tight">Пхукет Trip</a>
+    <nav class="text-sm font-semibold">
+      <a href="index.html" class="navlink hover:underline">Главная</a>
+      <a href="itinerary.html" class="navlink hover:underline">Маршрут</a>
+      <a href="sights.html" class="navlink hover:underline">Достопримечательности</a>
+      <a href="entertainment.html" class="navlink hover:underline">Развлечения</a>
+      <a href="tips.html" class="navlink hover:underline">Полезное</a>
+      <a href="budget.html" class="navlink hover:underline">Бюджет</a>
+      <a href="contacts.html" class="navlink hover:underline">Контакты</a>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-5xl px-6 pb-16 space-y-8">
+    <h1 class="text-3xl font-bold">Достопримечательности</h1>
+
+    <section class="grid md:grid-cols-2 gap-6 items-start card bg-white p-6">
+      <img src="images/big_buddha.svg" class="rounded-xl w-full h-64 object-cover" alt="Большой Будда">
+      <div class="prose">
+        <h2 class="text-xl font-semibold">Статуя Большого Будды</h2>
+        <p>Путешествие к Биг Будде — это не только возможность восхищаться красотой статуи, но и уникальный опыт погружения в тайскую культуру и духовность, ощущение покоя и гармонии.</p>
+        <ul class="list-disc pl-5 text-slate-700">
+          <li>Лучшее время: утро или закат.</li>
+          <li>Дресс‑код: закрытые плечи и колени.</li>
+          <li>Как добраться: такси/Grab, байк (серпантин).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-2 gap-6 items-start card bg-white p-6">
+      <img src="images/monkey_hill.svg" class="rounded-xl w-full h-64 object-cover" alt="Гора обезьян">
+      <div class="prose">
+        <h2 class="text-xl font-semibold">Гора обезьян</h2>
+        <p>Недалеко от Пхукет-тауна живут сотни мартышек. За ними интересно наблюдать и фотографировать.</p>
+        <ul class="list-disc pl-5 text-slate-700">
+          <li>Не кормите из рук — могут укусить и схватить вещи.</li>
+          <li>Держите телефоны и очки крепко — обезьяны хитрые!</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-2 gap-6 items-start card bg-white p-6">
+      <img src="images/old_town.svg" class="rounded-xl w-full h-64 object-cover" alt="Старый город">
+      <div class="prose">
+        <h2 class="text-xl font-semibold">Старый город</h2>
+        <p>Исторический центр с шопхаусами в смешении английской, португальской и китайской архитектуры — яркие фасады, узкие дома и уличные кафе.</p>
+        <ul class="list-disc pl-5 text-slate-700">
+          <li>Пешеходная ярмарка на Thalang Road по выходным.</li>
+          <li>Кофейни и арт‑стены — отличные фототочки.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-2 gap-6 items-start card bg-white p-6">
+      <img src="images/wat_chalong.svg" class="rounded-xl w-full h-64 object-cover" alt="Ват Чалонг">
+      <div class="prose">
+        <h2 class="text-xl font-semibold">Храм Ват Чалонг</h2>
+        <p>Целый храмовый комплекс: корпуса монахов, крематорий и белая остроконечная ступа Чеди Пхра Махатхат высотой около 62 м.</p>
+        <ul class="list-disc pl-5 text-slate-700">
+          <li>Тихие часы — раннее утро.</li>
+          <li>Снимайте обувь при входе в храмовые залы.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-2 gap-6 items-start card bg-white p-6">
+      <img src="images/phi_phi.svg" class="rounded-xl w-full h-64 object-cover" alt="Пхи‑Пхи">
+      <div class="prose">
+        <h2 class="text-xl font-semibold">Острова Пхи‑Пхи</h2>
+        <p>Белоснежные пляжи, лазурная вода и известняковые скалы. Лучший микс снорклинга, viewpoints и атмосферных кафе.</p>
+        <ul class="list-disc pl-5 text-slate-700">
+          <li>Экскурсии 1‑дневные из Пхукета или с ночёвкой на Пхи‑Пхи Доне.</li>
+          <li>Берегите кораллы — не вставайте на них ластами.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-2 gap-6 items-start card bg-white p-6">
+      <img src="images/james_bond.svg" class="rounded-xl w-full h-64 object-cover" alt="Джеймс Бонд">
+      <div class="prose">
+        <h2 class="text-xl font-semibold">Остров Джеймса Бонда</h2>
+        <p>«Звезда» фильма 1974 года «Человек с золотым пистолетом». Высокий скальный столб в заливе Пханг Нга — фото делают с лодки или соседнего острова.</p>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-2 gap-6 items-start card bg-white p-6">
+      <img src="images/maya_bay.svg" class="rounded-xl w-full h-64 object-cover" alt="Майя Бэй">
+      <div class="prose">
+        <h2 class="text-xl font-semibold">Майя Бэй</h2>
+        <p>Живописная бухта на Пхи‑Пхи Ле. Вход по правилам парка: часто запрещено купание у берега ради защиты экосистемы — актуальные условия уточняйте у оператора.</p>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-2 gap-6 items-start card bg-white p-6">
+      <img src="images/similan.svg" class="rounded-xl w-full h-64 object-cover" alt="Симиланские острова">
+      <div class="prose">
+        <h2 class="text-xl font-semibold">Симиланские острова</h2>
+        <p>Национальный парк и один из лучших дайв‑спотов Таиланда: белый песок, гранитные валуны, прозрачная вода. Сезон обычно с октября/ноября по май.</p>
+      </div>
+    </section>
+
+    <section class="grid md:grid-cols-2 gap-6 items-start card bg-white p-6">
+      <img src="images/krabi.svg" class="rounded-xl w-full h-64 object-cover" alt="Краби">
+      <div class="prose">
+        <h2 class="text-xl font-semibold">Краби</h2>
+        <p>Провинция на материке напротив Пхукета: Ао Нанг, Рейли, изумрудные лагуны и карстовые скалы. Удобны однодневки из Пхукета или переезд на пару ночей.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="mt-16 pb-12 text-center text-xs text-slate-500">
+    © Путешествие на Пхукет · Сделано с любовью
+  </footer>
+</body>
+</html>
