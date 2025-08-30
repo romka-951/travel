@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Маршрут и расписание</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    .card { border-radius: 1.25rem; box-shadow: 0 10px 30px rgba(2,6,23,.08); }
+    .prose p { margin-top: .5rem; }
+    .tag { display:inline-block; padding:.25rem .6rem; border-radius:9999px; background:#eef2ff; color:#3730a3; font-weight:600; font-size:.8rem; }
+    .navlink { margin-right: 1rem; }
+  </style>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin=""/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+</head>
+<body class="bg-gradient-to-b from-white via-slate-50 to-slate-100 text-slate-900">
+  <header class="mx-auto max-w-7xl px-6 pt-6 pb-4 flex justify-between items-center">
+    <a href="index.html" class="text-lg font-extrabold tracking-tight">Пхукет Trip</a>
+    <nav class="text-sm font-semibold">
+      <a href="index.html" class="navlink hover:underline">Главная</a>
+      <a href="itinerary.html" class="navlink hover:underline">Маршрут</a>
+      <a href="sights.html" class="navlink hover:underline">Достопримечательности</a>
+      <a href="entertainment.html" class="navlink hover:underline">Развлечения</a>
+      <a href="tips.html" class="navlink hover:underline">Полезное</a>
+      <a href="budget.html" class="navlink hover:underline">Бюджет</a>
+      <a href="contacts.html" class="navlink hover:underline">Контакты</a>
+    </nav>
+  </header>
+
+  <main class="mx-auto max-w-7xl px-6 pb-16">
+    <section class="card bg-white p-6 md:p-8">
+      <h1 class="text-3xl font-bold">Расписание перелётов</h1>
+      <ol class="mt-4 space-y-4 text-slate-700">
+        <li class="border-l-4 border-indigo-500 pl-4"><b>Самара → Санкт‑Петербург</b> — 15 октября, 19:15 → 20:35</li>
+        <li class="border-l-4 border-indigo-500 pl-4"><b>Санкт‑Петербург → Москва</b> — 20 октября, 07:00 → 14:00</li>
+        <li class="border-l-4 border-indigo-500 pl-4"><b>Москва → Пекин</b> — 20 октября, 20:45 → 21 октября, 08:55</li>
+        <li class="border-l-4 border-indigo-500 pl-4"><b>Пекин → Пхукет</b> — 21 октября, 12:45 → 17:45</li>
+        <li class="border-l-4 border-emerald-500 pl-4"><b>Пхукет → Пекин</b> — 31 октября, 18:25 → 1 ноября, 00:50</li>
+        <li class="border-l-4 border-emerald-500 pl-4"><b>Пекин → Москва</b> — 1 ноября, 14:15 → 17:40</li>
+        <li class="border-l-4 border-rose-500 pl-4"><b>Москва → Самара</b> — 2 ноября, 15:55 → 18:50</li>
+      </ol>
+    </section>
+
+    <section class="mt-10 card bg-white p-6 md:p-8">
+      <h2 class="text-2xl md:text-3xl font-bold mb-3">Карта маршрута</h2>
+      <div id="leaflet-map" style="height: 520px; border-radius: 1rem; overflow: hidden;"></div>
+      <p class="mt-3 text-sm text-slate-600">Кликните по маркерам, чтобы увидеть заметки.</p>
+    </section>
+  </main>
+
+  <script>
+    const ROUTE_POINTS = [
+      {name: "Самара", lat: 53.195, lng: 50.101, note: "Старт"},
+      {name: "Санкт‑Петербург", lat: 59.9343, lng: 30.3351, note: "Пересадка"},
+      {name: "Москва", lat: 55.7558, lng: 37.6173, note: "Пересадка"},
+      {name: "Пекин", lat: 39.9042, lng: 116.4074, note: "Пересадка"},
+      {name: "Пхукет", lat: 7.8804, lng: 98.3923, note: "Финиш"}
+    ];
+    const map = L.map('leaflet-map');
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '&copy; OpenStreetMap contributors' }).addTo(map);
+    const latlngs = ROUTE_POINTS.map(p => [p.lat, p.lng]);
+    const poly = L.polyline(latlngs, {weight: 4, opacity: 0.9}).addTo(map);
+    ROUTE_POINTS.forEach((p,i)=> L.marker([p.lat,p.lng]).addTo(map).bindPopup(`<b>${i+1}. ${p.name}</b><br>${p.note}`));
+    map.fitBounds(poly.getBounds(), {padding: [30, 30]});
+  </script>
+  <footer class="mt-16 pb-12 text-center text-xs text-slate-500">
+    © Путешествие на Пхукет · Сделано с любовью
+  </footer>
+</body>
+</html>
